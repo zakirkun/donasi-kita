@@ -5,6 +5,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary: #10b981;
+  --primary-hover: #059669;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,4 +20,11 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Tambahkan custom utilities */
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4;
+  }
 }
