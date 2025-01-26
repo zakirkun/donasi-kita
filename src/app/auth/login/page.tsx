@@ -6,6 +6,7 @@ import {
   faFacebook,
   faApple,
 } from '@fortawesome/free-brands-svg-icons';
+import Footer from '@/components/Footer';
 
 export default function Login() {
   const handleSocialLogin = (provider: string) => {
@@ -14,6 +15,7 @@ export default function Login() {
   };
 
   return (
+    <>
     <main className="min-h-screen flex items-center justify-center py-10 bg-gray-50">
       <div className="w-full max-w-md p-8 bg-white rounded-xl shadow-sm">
         <div className="text-center mb-8">
@@ -109,5 +111,7 @@ export default function Login() {
         </p>
       </div>
     </main>
+    <Footer />  
+    </>
   );
 } 

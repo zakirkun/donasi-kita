@@ -3,7 +3,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
-import Footer from "@/components/Footer";
 config.autoAddCss = false
 
 const geistSans = Geist({
@@ -27,8 +26,6 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   // Check if current path is auth page
-  const isAuthPage = typeof window !== 'undefined' ? 
-    window.location.pathname.startsWith('/auth') : false;
 
   return (
     <html lang="en">
@@ -38,7 +35,6 @@ export default function RootLayout({
         <div className="flex-1">
           {children}
         </div>
-        {!isAuthPage && <Footer />}
       </body>
     </html>
   );

@@ -7,8 +7,11 @@ import {
   faFacebook,
   faApple,
 } from '@fortawesome/free-brands-svg-icons';
+import Footer from '@/components/Footer';
 
-interface RegisterProps {}
+interface RegisterProps {
+    children: React.ReactNode;
+}
 
 const Register: React.FC<RegisterProps> = () => {
   const [step, setStep] = useState<'register' | 'otp'>('register');
@@ -55,6 +58,7 @@ const Register: React.FC<RegisterProps> = () => {
 
   if (step === 'otp') {
     return (
+    <>
       <main className="min-h-screen flex items-center justify-center py-10 bg-gray-50">
         <div className="w-full max-w-md p-8 bg-white rounded-xl shadow-sm">
           <div className="text-center mb-8">
@@ -100,10 +104,13 @@ const Register: React.FC<RegisterProps> = () => {
           </form>
         </div>
       </main>
+      <Footer />
+    </>
     );
   }
 
   return (
+    <>
     <main className="min-h-screen flex items-center justify-center py-10 bg-gray-50">
       <div className="w-full max-w-md p-8 bg-white rounded-xl shadow-sm">
         <div className="text-center mb-8">
@@ -214,6 +221,8 @@ const Register: React.FC<RegisterProps> = () => {
         </p>
       </div>
     </main>
+    <Footer />
+    </>
   );
 }
 
